@@ -1,0 +1,166 @@
+/* .home{
+    padding:0px 10px;
+    padding-bottom:100px;
+}
+.hero{
+    max-width:600px;
+    margin:80px auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:30px;
+}
+.hero h1{
+    font-size:max(4vw,36px);
+}
+.hero form{
+    padding:8px;
+    width:80%;
+    background-color:white;
+    border-radius:5px;
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+.hero input{
+    flex:1;
+    font-size:16px;
+    outline:none;
+    border:none;
+    padding-left:10px;
+}
+.hero button{
+    border:none;
+    background:#7927ff;
+    color:white;
+    font-size:16px;
+    padding:10px 30px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.carbon-table{
+    max-width:1000px;
+    margin:auto;
+    background:linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15))
+    border-radius:15px;
+}
+.table-layout{
+    display:grid;
+    grid-template-columns:0.5fr 2fr 1fr 1fr 1.5fr;
+    padding:15px 20px;
+    align-items:center;
+    border-bottom:1px solid #3c3c3c;
+}
+.ytd{
+    text-align:right;
+} */
+
+
+
+/* .home {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); /* Gradient */
+  /* min-height: 100vh;
+  color: white; /* Fixes heading visibility */
+//} */
+
+/* .hero h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.hero form {
+  margin-top: 20px;
+}
+
+.hero input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #061E44;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.tables-wrapper {
+  padding: 40px 20px;
+}
+
+.tables-wrapper h2 {
+  color: #ffffff;
+  margin: 30px 0 10px;
+} */ */
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #1a1441, #03242a);
+  min-height: 100vh;
+  color: white;
+}
+
+.hero {
+  padding: 60px 20px 20px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Center children horizontally */
+}
+
+.hero h1{
+    font-size:max(4vw,36px);
+}
+
+/* form {
+  margin-top: 20px;
+} */
+.hero form {
+  padding: 8px;
+  width: 100%;
+  max-width: 500px; /* ✅ Add max-width to center nicely */
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero input{
+    flex:1;
+    font-size:16px;
+    outline:none;
+    border:none;
+    padding-left:10px;
+}
+.hero button{
+    border:none;
+    background:#7927ff;
+    color:white;
+    font-size:16px;
+    padding:10px 30px;
+    border-radius:5px;
+    cursor:pointer;
+}
+table {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 1000px;
+  color: white;
+  border-collapse: collapse;
+}
