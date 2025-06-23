@@ -1,77 +1,22 @@
-/* /* .carbon-table table {
-  width: 90%;
-  margin: 2rem auto;
-  border-collapse: collapse;
-  background-color: #121212;
-  color: #fff;
-}
-
-.carbon-table th,
-.carbon-table td {
-  border: 1px solid #333;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-.carbon-table th {
-  background-color: #1e1e1e;
-  color: #eebc1d;
-} */
 
 
-/* .carbon-table {
-  margin: 20px auto;
-  max-width: 800px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: white; /* Ensures contrast */
-//}
-
-/* .table-layout {
-  display: grid;
-  grid-template-columns: 50px 1.5fr 1fr 1fr 1fr;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  color: #333; /* <-- Dark text */
-//}
-
-/* .table-header {
-  background-color: #061E44;
-  color: white;
-  font-weight: bold;
-} */
-
-/* .table-row {
-  background-color: white;
-  transition: background 0.3s;
-}
-
-.table-row:hover {
-  background-color: #f9f9f9;
-}
-
-.ytd {
-  text-align: right;
-} */
 .carbon-table-container {
   display: flex;
-  justify-content: center;  /* ✅ Horizontally center the child */
+  justify-content: center;
   padding: 20px;
   overflow-x: auto;
-  margin-left:30%;
+  /* 🛠️ Remove this line to properly center */
+  /* margin-left: 30%; */
 }
 
 .carbon-table {
   width: 90%;
-  max-width: 1000px;          /* ✅ Limit the table width */
+  max-width: 1000px;
   border-collapse: collapse;
   background-color: transparent;
   color: white;
   font-family: 'Segoe UI', sans-serif;
 }
-
 
 .carbon-table thead {
   background-color: #051c3f;
