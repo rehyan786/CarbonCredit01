@@ -263,8 +263,7 @@
 
 
 
-const chromium = require('chrome-aws-lambda');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const SolarMarket = require('../models/SolarMarket');
 
 /**
@@ -284,22 +283,12 @@ exports.getSolarPrices = async (req, res) => {
       });
     }
 
-    const executablePath = await chromium.executablePath;
-
-    if (!executablePath) {
-      return res.status(500).json({
-        message: 'Chromium not found in this environment.'
-      });
-    }
-
     const browser = await puppeteer.launch({
-      args: chromium.args,
-      executablePath,
-      headless: chromium.headless,
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     const page = await browser.newPage();
-
     await page.goto('https://carboncredits.com/latest-solar-prices/', {
       waitUntil: 'networkidle2'
     });
