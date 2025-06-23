@@ -26,10 +26,17 @@ exports.getSolarPrices = async (req, res) => {
     //   headless: 'new',
     //   args: ['--no-sandbox', '--disable-setuid-sandbox']
     // });
-    const browser = await puppeteer.launch({
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
-});
+//     const browser = await puppeteer.launch({
+//   headless: true,
+//   args: ['--no-sandbox', '--disable-setuid-sandbox']
+// });
+
+       const browser = await puppeteer.launch({
+          headless: true,
+          executablePath: puppeteer.executablePath(), // ✅ use downloaded Chrome
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+
 
 
     const page = await browser.newPage();
