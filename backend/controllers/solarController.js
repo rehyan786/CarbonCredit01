@@ -22,10 +22,15 @@ exports.getSolarPrices = async (req, res) => {
     }
 
     // If no recent data or force refresh, scrape from website
+    // const browser = await puppeteer.launch({
+    //   headless: 'new',
+    //   args: ['--no-sandbox', '--disable-setuid-sandbox']
+    // });
     const browser = await puppeteer.launch({
-      headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
+
 
     const page = await browser.newPage();
     
