@@ -1,4 +1,6 @@
-const puppeteer = require('puppeteer');
+const chromium = require('chrome-aws-lambda');
+const puppeteer = require('puppeteer-core');
+
 const SolarMarket = require('../models/SolarMarket');
 
 /**
@@ -31,11 +33,19 @@ exports.getSolarPrices = async (req, res) => {
 //   args: ['--no-sandbox', '--disable-setuid-sandbox']
 // });
 
-       const browser = await puppeteer.launch({
-          headless: true,
-          executablePath: puppeteer.executablePath(), // ✅ use downloaded Chrome
-          args: ['--no-sandbox', '--disable-setuid-sandbox']
-        });
+      //  const browser = await puppeteer.launch({
+      //     headless: true,
+      //     executablePath: puppeteer.executablePath(), // ✅ use downloaded Chrome
+      //     args: ['--no-sandbox', '--disable-setuid-sandbox']
+      //   });
+ 
+
+        const browser = await puppeteer.launch({
+            args: chromium.args,
+            executablePath: await chromium.executablePath || '/usr/bin/google-chrome',
+            headless: chromium.headless,
+            ignoreHTTPSErrors: true
+          });
 
 
 
