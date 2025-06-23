@@ -42,7 +42,7 @@ exports.getSolarPrices = async (req, res) => {
 
         const browser = await puppeteer.launch({
             args: chromium.args,
-            executablePath: await chromium.executablePath || '/usr/bin/google-chrome',
+            executablePath: await chromium.executablePath,
             headless: chromium.headless,
             ignoreHTTPSErrors: true
           });
