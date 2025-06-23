@@ -44,7 +44,7 @@ exports.getSolarPrices = async (req, res) => {
             args: chromium.args,
             executablePath: await chromium.executablePath,
             headless: chromium.headless,
-            ignoreHTTPSErrors: true
+            //ignoreHTTPSErrors: true
           });
 
 
