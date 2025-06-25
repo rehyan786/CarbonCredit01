@@ -1,2 +1,5 @@
 [build]
-builder = "docker"
+builder = "Dockerfile"
+
+[deploy]
+start = "npm start"
