@@ -51,7 +51,7 @@ const app = express();
 
 // ✅ Enable CORS for requests from React frontend (Vite runs on 5173)
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'https://smartsustainableservices.ae'],
   credentials: true
 }));
 
