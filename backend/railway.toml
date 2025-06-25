@@ -1,6 +1,5 @@
 [build]
-root = "backend"
-buildCommand = "npm install"
+builder = "node"
 
-[start]
-startCommand = "npm run start"
+[deploy]
+start = "npm start"
