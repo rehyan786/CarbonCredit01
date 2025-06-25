@@ -1,17 +1,17 @@
-# Use Node.js 18 image
+# Use Node.js 18
 FROM node:18
 
 # Set working directory
 WORKDIR /app
 
-# Copy only backend folder contents
+# Copy backend code
 COPY backend/ .
 
 # Install dependencies
 RUN npm install
 
-# Expose app port (e.g. 3000)
-EXPOSE  8080
+# Tell Docker this app will use a dynamic port
+EXPOSE 3000
 
-# Start the app
-CMD ["npm", "start"]
+# Start using the dynamically assigned port
+CMD [ "node", "app.js" ]
