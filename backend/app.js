@@ -45,6 +45,7 @@ const path = require('path');
 const cors = require('cors'); // ✅ Import cors
 const connectDB = require('./config/db');
 require('dotenv').config();
+const newsRoutes = require('./routes/news.route');
 
 // Initialize Express app
 const app = express();
@@ -68,6 +69,7 @@ const indexRoutes = require('./routes/index');
 
 // Use routes
 app.use('/', indexRoutes);
+app.use('/api/news', newsRoutes);
 
 // Error handler middleware
 app.use((err, req, res, next) => {
