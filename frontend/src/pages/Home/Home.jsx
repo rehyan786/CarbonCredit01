@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCarbonPrices = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/carbon-prices');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/carbon-prices`);
         const { complianceMarkets, voluntaryMarkets } = res.data;
 
         setCarbonData({

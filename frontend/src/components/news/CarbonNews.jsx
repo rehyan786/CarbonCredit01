@@ -6,7 +6,7 @@ const CarbonNews = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/news/carbon-global')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/news/carbon-global`)
       .then(res => setArticles(res.data.articles))
       .catch(err => console.error(err));
   }, []);

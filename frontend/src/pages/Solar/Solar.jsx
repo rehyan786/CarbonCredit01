@@ -10,7 +10,7 @@ const Solar = () => {
   useEffect(() => {
     const fetchSolar = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/solar-prices');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/solar-prices`);
         const data = res.data.data || [];
 
         // ✅ Sort alphabetically by country (case-insensitive)
