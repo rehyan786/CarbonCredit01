@@ -49,6 +49,11 @@ const newsRoutes = require('./routes/news.route');
 
 // Initialize Express app
 const app = express();
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.url}`);
+  next();
+});
+
 
 // ✅ Enable CORS for requests from React frontend (Vite runs on 5173)
 app.use(cors({
