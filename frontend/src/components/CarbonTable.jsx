@@ -47,7 +47,7 @@ const CarbonTable = ({ data, searchTerm }) => {
             <th>Last</th>
             <th>Change</th>
             <th>YTD</th>
-          </tr>
+          </tr> 
         </thead>
         <tbody>
           {renderSection('Compliance Markets', filteredCompliance)}
