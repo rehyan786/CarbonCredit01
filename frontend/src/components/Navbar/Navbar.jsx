@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-logo'>
-        <img src="Smart sustainable logo .png" alt="Logo" />
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <img src="Smart sustainable logo.png" alt="Logo" />
+        </Link>
       </div>
 
       {/* Hamburger Icon for mobile */}
