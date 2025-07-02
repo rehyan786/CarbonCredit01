@@ -10,10 +10,10 @@
   font-size: max(4vw, 36px);
 }
 
+/* === Table Styles === */
 .solar-table {
   margin: 40px auto;
   width: 90%;
-  max-width: 1000px;
   border-collapse: collapse;
   background-color: transparent;
   color: white;
@@ -30,45 +30,45 @@
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* === Info Grid Layout === */
 .carbon-info-grid {
   display: grid;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  grid-template-columns: 40% 40%;
-  /* gap: 24px; */
-  /* padding: 40px 5%; */
-  /* max-width: 1300px; */
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 40px 5%;
+  max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
-
-  
 }
 
-/* ✅ Force 2 items per row */
-.carbon-info-grid .info-block {
-  width: 100%; /* 🟡 2 cards per row, account for gap */
-  background-color: rgba(171, 7, 7, 0.05); /* optional */
+/* === Info Block === */
+.info-block-1,
+.info-block-2,
+.info-block-3,
+.info-block-4 {
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 10px;
   box-sizing: border-box;
   color: white;
+  width: 100%;
 }
 
-/* Headings */
-.info-block-1 h2,.info-block-2 h2,.info-block-3 h2,.info-block-4 h2 {
+.info-block-1 h2,
+.info-block-2 h2,
+.info-block-3 h2,
+.info-block-4 h2 {
   color: #EEBC1D;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.infor-block-2{
-  grid-row:1/2;
-}
-/* Paragraph & list */
+
 .info-block p,
 .info-block li {
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   list-style-type: none;
 }
 
@@ -76,9 +76,52 @@ ul {
   padding-left: 20px;
 }
 
-/* Responsive */
+/* === Responsive (Tablets & Mobiles) === */
 @media (max-width: 900px) {
-  .carbon-info-grid .info-block {
-    width: 100%; /* stack on mobile */
+  .carbon-info-grid {
+    grid-template-columns: 1fr; /* ➜ Stack all blocks */
+    padding: 24px 5%;
+  }
+
+  .solar-page h1 {
+    font-size: 28px;
+  }
+
+  .solar-table {
+    font-size: 0.95rem;
+  }
+
+  .solar-table th,
+  .solar-table td {
+    padding: 10px 12px;
+  }
+}
+
+/* === Extra Small Devices (Phones ≤ 480px) === */
+@media (max-width: 480px) {
+  .solar-page {
+    padding: 24px 16px;
+  }
+
+  .carbon-info-grid {
+    gap: 16px;
+    padding: 16px 4%;
+  }
+
+  .solar-table {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .info-block-1 h2,
+  .info-block-2 h2,
+  .info-block-3 h2,
+  .info-block-4 h2 {
+    font-size: 1rem;
+  }
+
+  .info-block p,
+  .info-block li {
+    font-size: 0.85rem;
   }
 }
