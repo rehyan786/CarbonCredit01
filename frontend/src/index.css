@@ -1,10 +1,29 @@
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* The handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 10px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e6c200;
+}
+html {
+  scroll-behavior: smooth;
+}
 *{
   padding:0;
   margin:0;
   box-sizing:border-box;
- overflow-x: hidden;
+ /* overflow-x: hidden; */
  
 }
+
 a{
   text-decoration:none;
   color:inherit;
@@ -12,4 +31,119 @@ a{
 .app{
   color:white;
   background:linear-gradient(#0b004e,#1d152f,#002834)
+}
+.abt_us{
+  height: 80vh;
+  width: 100%;
+  /* background-color: white; */
+  background:linear-gradient(#002834);
+  display: flex;
+}
+.abt_us .left{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+}
+.abt_us .right{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(192, 212, 40); */
+}
+.abt_us .left img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.abt_us .right div{
+  height: 70%;
+  width: 70%;
+  align-items: center;
+  /* background-color: rgb(40, 69, 212); */
+}
+.abt_us .right div h1{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 8vh;
+  font-weight: 300;
+}
+.abt_us .right div h2{
+  color: #42bb31;
+  font-family: cursive;
+  font-size: 3vh;
+  font-weight: 300;
+
+}
+.part_page{
+  height: 80vh;
+  width: 100%;
+  background-image: url("./bg-part.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgb(227, 18, 18);
+   */
+}
+.part_page h1{ 
+  text-align: center;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 10vh;
+  font-weight: 300;
+}
+.part_page p{ 
+  text-align: center;
+  color: rgb(38, 38, 38);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2vh;
+  font-weight: 300;
+}
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Solid blue button */
+.solid-btn {
+  background-color: #28b8ff;
+  color: white;
+  border: none;
+}
+
+/* Outline button */
+.outline-btn {
+  background-color: transparent;
+  color: #28b8ff;
+  border: 2px solid #28b8ff;
+}
+
+/* Hover Effects (optional) */
+.solid-btn:hover {
+  background-color: #1aa8f0;
+}
+
+.outline-btn:hover {
+  background-color: #28b8ff;
+  color: white;
+}
+@media (max-width: 768px){
+  *{
+    overflow-x: hidden;
+  }
 }

@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to bottom, #1a1441, #03242a);
+  
+   background-color: aliceblue;
   min-height: 100vh;
   color: white;
   padding-bottom: 60px; /* Prevents content from being cut off at bottom */

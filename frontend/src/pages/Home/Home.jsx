@@ -1,11 +1,10 @@
 
-
-
-
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import CarbonTable from '../../components/CarbonTable';
 import axios from 'axios';
+import LineGraph from '../../components/LineBar';
+
 
 const Home = () => {
   const [carbonData, setCarbonData] = useState({
@@ -35,6 +34,8 @@ const Home = () => {
 
   return (
   <div className="home">
+    <h1 className='' style={{ fontSize: '8vw',paddingTop:'4vh' }}>Carbon Credit</h1>
+    <LineGraph />
     <div className="hero">
       <h1>Live Carbon Prices</h1>
       <form
